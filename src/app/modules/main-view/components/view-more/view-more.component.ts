@@ -8,7 +8,7 @@ import { Hero } from 'src/app/core/models/Hero.model';
 })
 export class ViewMoreComponent implements OnInit {
 
-  public visible = false;
+  public visible;
   @Output() closeDialog: EventEmitter<Hero> = new EventEmitter<Hero>()
   @Input() hero;
   constructor() { }
