@@ -1,0 +1,28 @@
+<div id="myModal" class="modal" *ngIf="visible">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" (click)="onNoClick()">&times;</span>
+        <div class="row" style="padding: 40px">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <img width="100%" height="70%" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <strong>{{hero.title}}</strong>
+                <div class="contenedor">
+                    <p>{{hero.description ? hero.description : 'No existe una descripción para este
+                        comic'}}</p>
+                </div>
+            </div>
+        </div>
+        <div style="width: 100%; height: 60px; display: flex; flex-direction: row;">
+            <div (click)=" setHero()"
+                style=" width: 50%; background-color: #f0f0f0 ; height: 100%; justify-content: center; display: flex; align-items: center;">
+                Agregar a favoritos
+            </div>
+            <div
+                style="  width: 50%; background-color: #dcdcdc ;height: 100%;  justify-content: center; display: flex; align-items: center;">
+                comprar ahora
+            </div>
+        </div>
+    </div>
+</div>

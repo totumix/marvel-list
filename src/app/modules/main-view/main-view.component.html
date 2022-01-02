@@ -1,10 +1,40 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="row" style="background-color: #2d2727;">
-        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-2" style="display: flex; align-items: center;">
-            <img src="assets/images/marvel.png" width="100%">
+    <div class="row bg-header">
+        <div class="col-lg-2 col-md-2 col-xs-12 col-sm-2 d-flex a-item-center">
+            <img src="assets/images/marvel.png" class="w-100">
         </div>
-        <div class="col-lg-10 col-md-10 col-xs-12 col-sm-10" style="display: flex; align-items: center;">
-            <input type="search" placeholder="Busca tu Archivo" id="Buscador" />
+        <div class="col-lg-10 col-md-10 col-xs-12 col-sm-10 d-flex a-item-center">
+            <input type="search" placeholder="Busca tu Archivo" id="Buscador" [(ngModel)]="filterPost" />
         </div>
     </div>
 </div>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="row">
+        <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+            <h1>Characters</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-y-5"
+                    *ngFor="let heroe of heroes | filter: filterPost | paginate: { itemsPerPage: 10, currentPage: pagina }">
+                    <div class="row card">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                            <img width="100%" height="70%" src="{{heroe.thumbnail.path}}.{{heroe.thumbnail.extension}}">
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                            <strong>{{heroe.title}}</strong>
+                            <div class="contenedor">
+                                <p>{{heroe.description ? heroe.description : 'No existe una descripción para este
+                                    comic'}}</p>
+                            </div>
+                            <button class="u-btn u-btn--view-more" (click)="openViewMore(heroe)">VIEW
+                                MORE</button>
+                        </div>
+                    </div>
+                </div>
+                <pagination-controls (pageChange)="pagina = $event"></pagination-controls>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3" style="background : #ebebeb">
+            <app-my-favourites [favHeros]="favHeros"></app-my-favourites>
+        </div>
+    </div>
+    <div #viewMore></div>
