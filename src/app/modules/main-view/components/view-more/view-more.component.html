@@ -1,9 +1,9 @@
 <div class="modal" *ngIf="visible">
     <div class="modal__content">
-        <span class="modal__close" (click)="onNoClick()">&times;</span>
+        <div class="modal__close" (click)="onNoClick()"></div>
         <div class="row pdd-y-40">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                <img width="100%" height="70%" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
+                <img width="100%" height="90%" src="{{hero.thumbnail.path}}.{{hero.thumbnail.extension}}">
             </div>
             <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
                 <strong>{{hero.title}}</strong>
@@ -14,10 +14,12 @@
             </div>
         </div>
         <div class="modal__footer">
-            <div (click)=" setHero()" class="modal__footer__button modal__footer__button--fav">
+            <div (click)=" setHero()" class="modal__footer__button modal__footer__button--fav  modal__footer__button--fav--buy">
+                <div class=" modal__footer__button__icon add"></div>
                 Agregar a favoritos
             </div>
             <div class="modal__footer__button modal__footer__button--buy">
+                <div class=" modal__footer__button__icon buy"></div>
                 comprar ahora
             </div>
         </div>

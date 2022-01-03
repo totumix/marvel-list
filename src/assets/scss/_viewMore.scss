@@ -14,48 +14,69 @@
         margin: auto;
         border: 1px solid #888;
         width: 50%;
+    }
+    &__close {
+      color: #aaaaaa;
+      background-image: url('../images/btn-close.png')  ;
+      background-size: cover;
+      float: right;
+      height: 30px;
+      width: 30px;
+      margin: 5px;
+    }
+    &__close:hover,
+    &__close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
       }
-      &__close {
-        color: #aaaaaa;
-        float: right;
-        font-size: 28px;
-        font-weight: bold;
-        margin: 20px;
+    &__footer{
+      width: 100%; 
+      height: 60px; 
+      display: flex; 
+      flex-direction: row;
+      &__button{
+          width: 50%; 
+          height: 100%; 
+          justify-content: center; 
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          &--fav{
+            background-color: #f0f0f0 ; 
+          }
+          &--fav:hover{
+              background-color: #322827 ; 
+              color: red;
+          }
+          &--buy{
+              background-color: #dcdcdc ;
+              color: red;
+          }
+          &__icon{
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-repeat: no-repeat;
+          }
       }
-      &__close:hover,
-      &__close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-        }
-      &__footer{
-        width: 100%; 
-        height: 60px; 
-        display: flex; 
-        flex-direction: row;
-        &__button{
-            width: 50%; 
-            height: 100%; 
-            justify-content: center; 
-            display: flex;
-            align-items: center;
-            font-weight: bold;
-            &--fav{
-                background-color: #f0f0f0 ; 
-            }
-            &--fav:hover{
-                background-color: #322827 ; 
-                color: red;
-            }
-            &--buy{
-                background-color: #dcdcdc ;
-                color: red;
-            }
-        }
-      }
+    }
   }
   
   /* Modal Content */
+ .buy{
+  background-image: url('../images/shopping-cart-primary.png')   ;
+ }
+
+ .add{
+  background-image: url('../images/btn-favourites-default.png')   ;
+ }
+
+ .add:hover{
+  background-image: url('../images/btn-favourites-primary.png')   ;
+ }
+
  
   
   /* The Close Button */
