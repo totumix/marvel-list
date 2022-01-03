@@ -22,6 +22,7 @@ export class MainViewComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.page = 1;
+    this.favComics = JSON.parse(localStorage.getItem('comics'));
     this._marvelService.getHeroes().subscribe(
       res => {
         let { data } = res;
@@ -41,6 +42,7 @@ export class MainViewComponent implements OnInit, AfterViewInit {
       const index = this.favComics.findIndex(a => a.id === comic.id);
       if (index < 0) {
         this.favComics.push(comic)
+        localStorage.setItem('comics', JSON.stringify(this.favComics))
       }
     })
   }
