@@ -12,18 +12,12 @@ $white: #ffffff;
 $red : #E2474B;
 $redAlert : #f8d7d9;
 $greenSuccess : #155724;
-
-//FONT SIZE
-$size12: 0.750rem;
-$size14: 0.875rem;
-$size16: 1rem;
-$size18: 1.125rem;
-$size20: 1.25rem;
 $size24: 1.5rem;
 $size25: 1.5625rem;
 $size30: 1.875rem;
 $size40: 2.5rem;
 $size50: 3.125rem;
+$favourites:#ebebeb;
 
 #Buscador {
   background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
@@ -98,46 +92,6 @@ $size50: 3.125rem;
 }
 
 
-.font{
-  &-14{
-    font-size: $size14;
-  }
-  &-16{
-    font-size: $size16;
-  }
-  &-18{
-    font-size: $size18;
-  }
-  &-24{
-    font-size: $size24;
-  }
-}
-
-.d-block{
-  display: block;
-}
-
-.flex-container {
-  display:flex;
-  align-items:center;
-  cursor: pointer;
-}
-
-.d-inline-block{
-  display: inline-block;
-}
-.w-100{
-  width: 100%;
-}
-
-.float-r{
-  float: right;
-}
-
-.float-l{
-  float: left;
-}
-
 .d-flex{
   display: flex;
 }
@@ -154,15 +108,7 @@ $size50: 3.125rem;
     cursor: pointer;
 }
 
-.user-img{
-  height: 250px; 
-  width: 250px; 
-  margin: 0 auto; 
-  cursor: pointer; 
-  border: 1px solid #ccc; 
-  padding: 5px;
-  border-radius: 10px;
-}
+
 
 //TEXT
 .text {
@@ -189,28 +135,16 @@ $size50: 3.125rem;
   justify-content: center;
 }
 
-.justify-content-space-around{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around; 
+.w-100{
+  width: 100%;
 }
 
-//FONT-COLORS
-
-.icon-container{
-  display:flex;
-  align-items:center;
-  cursor: pointer;
-}
-
-//LINKS
-.link { color: $blueDark; font-size: 12px; } 
-.link:hover { color: $blueMedium; font-size: 12px; } 
-.link-none{ text-decoration: none; color: $white;}
-//BACKGROUND-COLORS
 .bg {
   &-header {
     background-color: $header;
+  }
+  &-favourites{
+    background-color: $favourites;
   }
 }
 
@@ -348,33 +282,6 @@ $size50: 3.125rem;
   width: 100%;
 }
 
-@keyframes animacion-scale {
-  0%{
-    transform: scale(0.6,0.6) ;
-  }
-  100%{
-    transform: scale(1,1) ;
-  }
-}
-
-//BORDER
-.border-radius-top{
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.border-radius-top-l{
-  border-top-left-radius: 10px;
-}
-
-.border-radius-top-r{
-  border-top-right-radius: 10px;
-}
-
-.border-radius-bottom{
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
 
 //BUTTONS
 .u-btn {
@@ -394,23 +301,6 @@ $size50: 3.125rem;
   }
 }
 
-.hr-sect {
-	display: flex;
-	flex-basis: 100%;
-	align-items: center;
-	color: $black;
-	margin: 8px 0px;
-}
-.hr-sect:before,
-.hr-sect:after {
-  content: "";
-	flex-grow: 1;
-	background: $black;
-	height: 1px;
-	font-size: 0px;
-	line-height: 0px;
-	margin: 0px 8px;
-}
 
 //HIDE
 .hide {
@@ -456,49 +346,4 @@ $size50: 3.125rem;
       display: none;
     }
   }
-}
-//ALERTS
-.alert{
-  position: relative;
-  padding: .75rem 1.25rem;
-  margin-bottom: 1rem;
-  border: 1px solid transparent;
-  border-radius: .25rem;
-  &--danger{
-    color: #721c24;
-    background-color: $redAlert;
-    border-color: #f5c6cb;
-  }
-  &--success{
-    color: $greenSuccess;
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-  }
-
-}
-
- .avatar{
-   width: 100px;
-   height: 100px;
-   border-radius: 100px;
-   overflow: hidden;
-   margin: 5px 10px;
-}
-
-.avatar img{
-  height: 100px;
-  width: 100px;
-}
-
-.avatar-mini{
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  overflow: hidden;
-  margin: 5px 10px;
-}
-
-.avatar-mini img{
- height: 40px;
- width: 40px;
 }
