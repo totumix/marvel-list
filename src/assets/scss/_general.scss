@@ -39,6 +39,20 @@ $favourites:#ebebeb;
   padding:0 1rem;
 }
 
+.comic-name{
+  color: #afa8a9;
+   padding: 15px;
+}
+.comic-name:hover,
+.comic-name:focus{
+  color: red;
+   background:url('../images/link-arrow.png');
+   background-size: 24px;
+   background-repeat: no-repeat;
+   background-position: left;
+   padding-left: 30px;
+}
+
 .character{
   background-image: url('../images/characters.png')  ;
   background-size: 50px 50px;

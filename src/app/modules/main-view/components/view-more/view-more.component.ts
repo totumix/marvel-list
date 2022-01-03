@@ -1,20 +1,16 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Hero } from 'src/app/core/models/Hero.model';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-view-more',
   templateUrl: './view-more.component.html',
   styleUrls: ['./view-more.component.scss']
 })
-export class ViewMoreComponent implements OnInit {
+export class ViewMoreComponent {
 
   public visible;
-  @Output() closeDialog: EventEmitter<Hero> = new EventEmitter<Hero>()
-  @Input() hero;
+  @Output() closeDialog: EventEmitter<any> = new EventEmitter<any>()
+  @Input() comic;
   constructor() { }
-
-  ngOnInit(): void {
-  }
 
   public toggleModal() {
     this.visible = !this.visible;
@@ -25,9 +21,9 @@ export class ViewMoreComponent implements OnInit {
     this.closeDialog.emit()
   }
 
-  setHero() {
+  setComic() {
     this.visible = false;
-    this.closeDialog.emit(this.hero)
+    this.closeDialog.emit(this.comic)
   }
 
 }

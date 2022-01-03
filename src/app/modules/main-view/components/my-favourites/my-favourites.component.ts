@@ -7,14 +7,14 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MyFavouritesComponent implements OnInit {
 
-  @Input() favHeros = [];
+  @Input() favComics = [];
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  deleteFavHero(deleteHero) {
-    const index = this.favHeros.indexOf(deleteHero);
-    this.favHeros.splice(index, 1);
+  deleteFavComic(deleteComic) {
+    const index = this.favComics.indexOf(deleteComic);
+    this.favComics.splice(index, 1);
   }
 }
