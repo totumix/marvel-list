@@ -25,6 +25,78 @@ $size30: 1.875rem;
 $size40: 2.5rem;
 $size50: 3.125rem;
 
+#Buscador {
+  background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 0px 5px;
+  background-color: white;
+  background-size: 24px;
+  width: 100%;
+  border: transparent;
+  border-bottom: solid 1px #ccc;
+  padding: 10px 10px 10px 30px;
+  outline: none;
+}
+
+.contenedor {
+  height: 150px;
+  width: 100%;
+  margin: 10px 0;
+  overflow:auto;
+  box-sizing: border-box;
+  padding:0 1rem;
+}
+
+.character{
+  background-image: url('../images/characters.png')  ;
+  background-size: 50px 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  height: 70px;
+  width: 30px;
+  padding-left: 40px;
+  margin: 5px;
+}
+
+.favourites{
+  background-image: url('../images/favourites.png')  ;
+  background-size: 30px 30px;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  display: flex;
+  width: 5px;
+  height: 70px;
+  padding-left: 40px;
+  margin: 5px;
+}
+
+.contenedor::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.contenedor::-webkit-scrollbar:vertical {
+  width:10px;
+}
+
+.contenedor::-webkit-scrollbar-button:increment,.contenedor::-webkit-scrollbar-button {
+  display: none;
+} 
+
+.contenedor::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.contenedor::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.contenedor::-webkit-scrollbar-track {
+  border-radius: 10px;  
+}
+
 
 .font{
   &-14{
