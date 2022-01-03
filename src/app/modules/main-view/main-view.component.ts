@@ -11,8 +11,8 @@ export class MainViewComponent implements OnInit, AfterViewInit {
 
   public heroes = [];
   public favComics = [];
-  public pagina: number;
-  filterPost = '';
+  public page: number;
+  filterComic = '';
   public simpleViewMore: ComponentRef<ViewMoreComponent> = null;
   @ViewChild("viewMore", { read: ViewContainerRef }) viewMoreContainer: ViewContainerRef
 
@@ -21,7 +21,7 @@ export class MainViewComponent implements OnInit, AfterViewInit {
     private resolver: ComponentFactoryResolver) { }
 
   ngOnInit(): void {
-    this.pagina = 1;
+    this.page = 1;
     this._marvelService.getHeroes().subscribe(
       res => {
         let { data } = res;

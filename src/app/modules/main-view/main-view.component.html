@@ -4,7 +4,7 @@
             <img src="assets/images/marvel.png" class="w-100">
         </div>
         <div class="col-lg-10 col-md-10 col-xs-12 col-sm-10 d-flex a-item-center">
-            <input type="search" placeholder="Busca tu Archivo" id="Buscador" [(ngModel)]="filterPost" />
+            <input type="search" placeholder="Busca tu Archivo" id="Buscador" [(ngModel)]="filterComic" />
         </div>
     </div>
 </div>
@@ -16,7 +16,7 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 mg-y-5"
-                    *ngFor="let hero of heroes | filter: filterPost | paginate: { itemsPerPage: 10, currentPage: pagina }">
+                    *ngFor="let hero of heroes | filter: filterComic | paginate: { itemsPerPage: 10, currentPage: page }">
                     <div class="card">
                         <div class="row">
                             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
@@ -37,7 +37,7 @@
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <div class="row">
-                                    <div class="col-lg-6"  *ngFor="let comic of hero?.items"
+                                    <div class="col-lg-6" *ngFor="let comic of hero?.items"
                                         [ngClass]="{ hideChildren : accordion.class !== 'showChildren' }">
                                         <div class="comic-name" (click)="openViewMore(comic)">{{comic.name}}</div>
                                     </div>
@@ -47,7 +47,10 @@
                         </div>
                     </div>
                 </div>
-                <pagination-controls (pageChange)="pagina = $event"></pagination-controls>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 justify-content-center ">
+                    <pagination-controls previousLabel="" autoHide="false" (pageBoundsCorrection)="page = $event"
+                        nextLabel="" (pageChange)="page = $event"></pagination-controls>
+                </div>
             </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 bg-favourites">
